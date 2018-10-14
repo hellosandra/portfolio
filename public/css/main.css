@@ -1,0 +1,208 @@
+@font-face {
+    font-family             : "Quicksand Bold";
+    src                     : url("/assets/fonts/Quicksand-Bold.ttf");
+}
+
+@font-face {
+    font-family             : "Quicksand Medium";
+    src                     : url("/assets/fonts/Quicksand-Medium.ttf");
+}
+
+@font-face {
+    font-family             : "Quicksand Regular";
+    src                     : url("/assets/fonts/Quicksand-Regular.ttf");
+}
+
+@font-face {
+    font-family             : "Quicksand Light";
+    src                     : url("/assets/fonts/Quicksand-Light.ttf");
+}
+
+@font-face {
+    font-family             : "Prensa";
+    src                     : url("/assets/fonts/Prensa.otf");
+}
+
+body {
+    margin                  : 0;
+    font-family             : Arial;
+}
+
+.col {
+    /* align-items             : center; */
+    display                 : flex;
+}
+
+.col-fill {
+    width                   : 100%;
+}
+
+.col-1 {
+    width                   : 8.3333%;
+}
+
+.col-2 {
+    width                   : 16.6666%;
+}
+
+.col-3 {
+    width                   : 25%;
+}
+
+.col-4 {
+    width                   : 33.3332%;
+}
+
+.col-5 {
+    width                   : 41.6653%;
+}
+
+.col-6 {
+    width                   : 50%;
+}
+
+.col-7 {
+    width                   : 58.3328%;
+}
+
+.col-8 {
+    width                   : 66.6661%;
+}
+
+.col-9 {
+    width                   : 75%;
+}
+
+.col-10 {
+    width                   : 83.3327%;
+}
+
+.col-11 {
+    width                   : 91.6667%;
+}
+
+.col-12 {
+    width                   : 100%;
+}
+
+nav {
+    padding                 : 0 100px;
+    display                 : flex;
+    height                  : 60px;
+    max-height              : 60px;
+    border-bottom           : 1px solid #ddd;
+    box-shadow              : 0 3px 2px -2px #c8c8c833;
+    margin                  : 0;
+}
+
+a {
+    cursor                  : pointer;
+    text-decoration         : none;
+    color                   : inherit;
+}
+
+.logo {
+    cursor                  : pointer;
+    text-transform          : uppercase;
+    padding                 : 10px 0;
+    font-family             : "Quicksand Bold";
+    color                   : #ff4500;
+    text-align              : left;
+    font-size               : larger;
+}
+
+.logo > span {
+    font-size               : small;
+    color                   : #000;
+}
+
+main {
+    padding                 : 0 0px;
+    display                 : flex;
+    flex-direction          : column;
+    /* height                  : 650px; */
+    align-items             : center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin                  : 20px 0;
+    text-align              : justify;
+}
+
+.btn {
+    text-transform          : uppercase;
+    padding                 : 10px;
+    border-radius           : 1px;
+    background-color        : #4682b4;
+    color                   : #fff;
+    margin                  : 0 auto;
+    font-family             : Quicksand Medium;
+    font-size               : small;
+    cursor                  : pointer;
+}
+
+input {
+    padding                 : 10px;
+    border                  : 1px solid #0000001a;
+    border-radius           : 1px;
+}
+
+input:focus {
+    outline                 : 2px solid #4682b4;
+}
+
+input[type="submit"] {
+    background-color        : #4682b4;
+    color                   : #fff;
+    text-transform          : uppercase;
+    border-radius           : 1px;
+    margin                  : 10px 0;
+}
+
+label {
+    margin                  : 10px 0;
+    font-family             : sans-serif;
+    font-size               : small;
+}
+
+#header-links {
+    padding                 : 85px;
+    margin                  : 0;
+    cursor                  : pointer;
+    text-align              : center;
+}
+
+#header-links:hover {
+    background-color        : #ff4500;
+    color                   : #fff;
+}
+
+section > div {
+    height                  : 100%;
+}
+
+section > div > div {
+    height                  : 50%;
+}
+
+.cover {
+    background              : url("/assets/images/face.jpg") no-repeat;
+    background-size         : cover;
+    display                 : flex;
+}
+
+.cover-msg {
+    background-color        : #000;
+    padding                 : 95px;
+    opacity                 : 0.8;
+    color                   : #fff;
+    text-transform          : uppercase;
+}
+
+.cover-msg h1 {
+    font-size               : xx-large;
+}
+
+.cover-msg p {
+    font-size               : small;
+}
