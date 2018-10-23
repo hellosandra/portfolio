@@ -7,7 +7,7 @@ const expHBS            = require("express-handlebars").create({defaultLayout: "
 
 // Custom modules
 const config            = require("./config/config");
-const routes            = require("./routes/main-routes");
+const router            = require("./routes/router");
 
 
 // Setup view engine
@@ -16,7 +16,7 @@ app.set("view engine", "hbs")
 
 // Middleware
 app.use(express.static(__dirname + "/public/"))
-app.use("/", routes);
+app.use("/", router);
 
 // Custom Error Pages
 // 404

@@ -1,9 +1,7 @@
-const express           = require("express");
-const Router            = express.Router();
-
-// HOME PAGE
-Router.get("/", (req, res) => {
+exports.home            = function (req, res) {
     res.render("home")
-});
+}
 
-module.exports = Router;
+exports.portfolio       = function (req, res) {
+    
+}

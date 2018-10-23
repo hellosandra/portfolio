@@ -1,40 +1,25 @@
 @font-face {
-    font-family             : "Quicksand Bold";
-    src                     : url("/assets/fonts/Quicksand-Bold.ttf");
+    font-family             : "Crunchy";
+    src                     : url("/assets/fonts/Crunchy.ttf");
 }
 
 @font-face {
-    font-family             : "Quicksand Medium";
-    src                     : url("/assets/fonts/Quicksand-Medium.ttf");
+    font-family             : "Grotesk Regular";
+    src                     : url("/assets/fonts/HKGrotesk-Regular.otf");
 }
 
 @font-face {
-    font-family             : "Quicksand Regular";
-    src                     : url("/assets/fonts/Quicksand-Regular.ttf");
+    font-family             : "Grotesk Medium";
+    src                     : url("/assets/fonts/HKGrotesk-Medium.otf");
 }
 
 @font-face {
-    font-family             : "Quicksand Light";
-    src                     : url("/assets/fonts/Quicksand-Light.ttf");
-}
-
-@font-face {
-    font-family             : "Prensa";
-    src                     : url("/assets/fonts/Prensa.otf");
-}
-
-body {
-    margin                  : 0;
-    font-family             : Arial;
+    font-family             : "Grotesk Bold";
+    src                     : url("/assets/fonts/HKGrotesk-Bold.otf")
 }
 
 .col {
-    /* align-items             : center; */
     display                 : flex;
-}
-
-.col-fill {
-    width                   : 100%;
 }
 
 .col-1 {
@@ -85,124 +70,105 @@ body {
     width                   : 100%;
 }
 
-nav {
-    padding                 : 0 100px;
-    display                 : flex;
-    height                  : 60px;
-    max-height              : 60px;
-    border-bottom           : 1px solid #ddd;
-    box-shadow              : 0 3px 2px -2px #c8c8c833;
+html {
+    height                  : 100%;
+}
+
+body {
     margin                  : 0;
-}
-
-a {
-    cursor                  : pointer;
-    text-decoration         : none;
-    color                   : inherit;
-}
-
-.logo {
-    cursor                  : pointer;
-    text-transform          : uppercase;
-    padding                 : 10px 0;
-    font-family             : "Quicksand Bold";
-    color                   : #ff4500;
-    text-align              : left;
-    font-size               : larger;
-}
-
-.logo > span {
-    font-size               : small;
-    color                   : #000;
+    font-family             : "Grotesk Regular";
+    height                  : 100%;
+    display                 : flex;
+    flex-direction          : column;
 }
 
 main {
-    padding                 : 0 0px;
+    height                  : 90%;
+}
+
+nav {
     display                 : flex;
+    flex-wrap               : wrap;
+}
+
+nav > div {
+    background-color        : #f5f5f5;
+}
+
+a {
+    text-decoration         : none;
+    color                   : #000;
+    cursor                  : pointer;
+}
+
+.logo {
+    font-size               : xx-large;
+    font-family             : "Crunchy";
+}
+
+button {
+    border                  : 0;
+    margin                  : 0 0 0 auto;
+    background-color        : #ff4500;
+    color                   : #fff;
+    cursor                  : pointer;
+}
+
+#menu-links {
+    display                 : none;
     flex-direction          : column;
-    /* height                  : 650px; */
-    align-items             : center;
+}
+
+#menu-links > a {
+    padding                 : 10px 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin                  : 20px 0;
-    text-align              : justify;
+    font-family             : "Grotesk Medium";
 }
 
-.btn {
+.action-button {
     text-transform          : uppercase;
-    padding                 : 10px;
-    border-radius           : 1px;
-    background-color        : #4682b4;
+    font-family             : "Grotesk Bold";
+    border                  : 2px solid #ff4500;
+}
+
+#contact-info-block {
+    background-color        : #000;
     color                   : #fff;
-    margin                  : 0 auto;
-    font-family             : Quicksand Medium;
-    font-size               : small;
-    cursor                  : pointer;
 }
 
-input {
-    padding                 : 10px;
-    border                  : 1px solid #0000001a;
-    border-radius           : 1px;
-}
-
-input:focus {
-    outline                 : 2px solid #4682b4;
-}
-
-input[type="submit"] {
-    background-color        : #4682b4;
-    color                   : #fff;
-    text-transform          : uppercase;
-    border-radius           : 1px;
-    margin                  : 10px 0;
-}
-
-label {
-    margin                  : 10px 0;
-    font-family             : sans-serif;
-    font-size               : small;
-}
-
-#header-links {
-    padding                 : 85px;
-    margin                  : 0;
-    cursor                  : pointer;
-    text-align              : center;
-}
-
-#header-links:hover {
+#values-block {
     background-color        : #ff4500;
     color                   : #fff;
 }
 
-section > div {
-    height                  : 100%;
-}
-
-section > div > div {
-    height                  : 50%;
-}
-
-.cover {
-    background              : url("/assets/images/face.jpg") no-repeat;
-    background-size         : cover;
+main > section {
     display                 : flex;
+    flex-direction          : column;
 }
 
-.cover-msg {
-    background-color        : #000;
-    padding                 : 95px;
-    opacity                 : 0.8;
-    color                   : #fff;
-    text-transform          : uppercase;
-}
+@media (min-width: 100px) {
+    .logo {
+        padding                 : 5px 20px;
+    }
 
-.cover-msg h1 {
-    font-size               : xx-large;
-}
+    button {
+        padding                 : 10px 20px;
+    }
 
-.cover-msg p {
-    font-size               : small;
+    section > div {
+        padding                 : 0 20px;
+        margin                  : 40% 0 0;
+    }
+
+    #link-portfolio {
+        background-color        : inherit;
+        color                   : #000;
+    }
+
+    #contact-info-block {
+        padding                 : 0 20px;
+        height                  : 20%;
+    }
 }
