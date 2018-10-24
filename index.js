@@ -29,6 +29,6 @@ app.use( (req, res, next) => {
     res.status(500).render("500");
 })
 
-app.listen(config.PORT, () => {
+app.listen(process.env.PORT|| config.PORT, () => {
     console.log("Server started on port: ", config.PORT);
 })
