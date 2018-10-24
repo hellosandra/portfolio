@@ -3,7 +3,7 @@
     const menuLinks     = document.querySelector("#menu-links");
     let state           = 0;
 
-    function hideNavMenu () {
+    menuIcon.addEventListener("click", () => {
         if (state === 0) {
             menuLinks.style.display = "flex";
             state = 1;
@@ -11,7 +11,5 @@
             menuLinks.style.display = "none";
             state = 0;
         }
-    }
-
-    menuIcon.addEventListener("click", hideNavMenu, false);
+    }, false);
 })()
