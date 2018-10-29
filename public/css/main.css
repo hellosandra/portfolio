@@ -83,7 +83,7 @@ body {
 }
 
 main {
-    height                  : 90%;
+    height                  : 100%;
 }
 
 nav {
@@ -97,7 +97,7 @@ nav > div {
 
 a {
     text-decoration         : none;
-    color                   : #000;
+    color                   : inherit;
     cursor                  : pointer;
 }
 
@@ -133,11 +133,6 @@ h1, h2, h3, h4, h5, h6 {
     border                  : 2px solid #ff4500;
 }
 
-#contact-info-block {
-    background-color        : #000;
-    color                   : #fff;
-}
-
 #values-block {
     background-color        : #ff4500;
     color                   : #fff;
@@ -145,7 +140,9 @@ h1, h2, h3, h4, h5, h6 {
 
 main > section {
     display                 : flex;
-    /* flex-direction          : column; */
+    flex-wrap               : wrap;
+    background              : url("/assets/images/bg-gallary.svg") no-repeat;
+    background-size         : cover;
 }
 
 ul {
@@ -153,7 +150,38 @@ ul {
     padding                 : 0;
 }
 
+#contact-info-container a {
+    color                   : inherit;
+    border-bottom           : 1px solid;
+}
+
+.row {
+    display                 : flex;
+    width                   : 100%;
+}
+
+.project-block {
+    position                : relative;
+}
+.project-block > h3 {
+    border-bottom           : 1px solid;
+}
+
+.project-block .action-button {
+    position                : absolute;
+    bottom                  : 20px;
+}
+
+.row button {
+    margin                  : 0 auto;
+}
+
+
 @media (min-width: 100px) {
+    body {
+        overflow                : hidden;
+    }
+
     #logo-container {
         padding                 : 5px 0;
     }
@@ -162,13 +190,12 @@ ul {
         padding                 : 5px 20px;
     }
 
-    button {
-        padding                 : 10px 15px;
+    section {
+        height                  : 100%;
     }
 
-    section > div {
-        padding                 : 0 20px;
-        margin                  : 40% 0 0;
+    button {
+        padding                 : 10px 15px;
     }
 
     #link-portfolio {
@@ -203,9 +230,23 @@ ul {
     #contact-info-container {
         display                 : none;
     }
+
+    .row {
+        display                 : none;
+    }
+
+    .main-row {
+        display                 : flex;
+        padding                 : 200px 20px 310px;
+        background              : url("/assets/images/face-mobile.jpg") no-repeat;
+        background-size         : cover;
+    }
 }
 
 @media (min-width: 700px) {
+    body {
+        overflow                : auto;
+    }
     #menu-icon {
         display                 : none;
     }
@@ -214,18 +255,64 @@ ul {
         padding                 : 10px 0;
     }
 
-    section div {
+    section > div {
         margin                  : 0;
-        padding                 : 20px;
+    }
+
+    .main-row {
+        padding                 : 0;
+        background              : url("/assets/images/face-gray.jpg") no-repeat;
+        background-size         : cover;
+    }
+
+    .row {
+        display                 : flex;
     }
 
     #welcome-note {
         width                   : 60%;
+        padding                 : 20px;
     }
 
     #contact-info-container {
         display                 : block;
+        width                   : 100%;
+        padding                 : 20px;
+    }
+
+    .project-block {
+        padding                 : 20px;
+    }
+
+    .pb-one {
+        width                   : 30%;
+    }
+
+    .pb-two {
+        width                   : 70%;
         background-color        : #000;
         color                   : #fff;
     }
+
+    .pb-three {
+        width                   : 35%;
+        background-color        : #000;
+        color                   : #fff;
+    }
+
+    .pb-four {
+        width                   : 40%;
+        background-color        : #ff4500;
+        color                   : #fff;
+    }
+
+    .pb-four button {
+        border                  : 2px solid #000;
+        background-color        : #000;
+    }
+
+    .pb-five {
+        width                   : 35%;
+    }
+
 }
