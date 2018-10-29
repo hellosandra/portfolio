@@ -272,6 +272,7 @@ ul {
     #welcome-note {
         width                   : 60%;
         padding                 : 20px;
+        height                  : 250px;
     }
 
     #contact-info-container {
@@ -315,4 +316,45 @@ ul {
         width                   : 35%;
     }
 
+}
+
+
+@media(min-width: 900px) {
+    .project-block {
+        height                  : 180px;
+    }
+
+    .pb-four {
+        width                   : 41%;
+    }
+}
+
+@media(min-width: 1000px) {
+    #welcome-note {
+        padding                 : 120px
+    }
+
+    .project-block {
+        padding                 : 20px 120px;
+    }
+
+    .pb-three {
+        width                   : 48.6%;
+    }
+
+    .pb-four {
+        width                   : 43.5%;
+    }
+
+    .main-row {
+        height                  : 65%;
+    }
+
+    #logo-container {
+        padding                 : 10px 100px;
+    }
+
+    #contact-info-container {
+        padding                 : 20px 120px;
+    }
 }
