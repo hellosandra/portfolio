@@ -206,7 +206,7 @@ form {
 }
 
 
-.form-header > h1 {
+.form-header > h3 {
     margin                  : 0;
 }
 
@@ -233,10 +233,6 @@ input[type="submit"] {
 }
 
 @media (min-width: 100px) {
-    body {
-        overflow                : hidden;
-    }
-
     #logo-container {
         padding                 : 5px 0;
     }
@@ -393,8 +389,11 @@ input[type="submit"] {
         padding                 : 20px;
         width                   : 82%;
     }
-}
 
+    form {
+        padding                 : 20px 40px;
+    }
+}
 
 @media(min-width: 900px) {
     .project-block {

@@ -43,7 +43,7 @@ const Controller        = {
         var state       = 0;
 
         Elements.contactLink.addEventListener("click", () => {
-            if (document.lastChild.clientWidth < 1000 && state === 0) {
+            if (document.lastChild.clientWidth < 700 && state === 0) {
                 View.display(Elements.contactForm);
                 View.hide(Elements.welcomeNote)
             }else {
