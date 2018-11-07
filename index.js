@@ -1,9 +1,12 @@
 // Express
 const express           = require("express");
 const app               = express();
+const http              = require("http");
 
 // Dependencies
-const expHBS            = require("express-handlebars").create({defaultLayout: "main"});
+const expHBS            = require("express-handlebars").create({
+  defaultLayout: "main"
+});
 
 // Custom modules
 const config            = require("./config/config");
@@ -15,7 +18,7 @@ app.engine("hbs", expHBS.engine);
 app.set("view engine", "hbs")
 
 // Middleware
-app.use(express.static(__dirname + "/public/"))
+app.use(express.static(__dirname + "/public/"));
 app.use("/", router);
 
 // Custom Error Pages

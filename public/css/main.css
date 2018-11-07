@@ -116,12 +116,17 @@ button {
 
 #menu-links {
     display                 : none;
+}
+
+#menu-links > div {
+    display                 : flex;
     flex-direction          : column;
 }
 
-#menu-links > a {
+#menu-links > div > a {
     padding                 : 10px 20px;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family             : "Grotesk Medium";
@@ -176,6 +181,56 @@ ul {
     margin                  : 0 auto;
 }
 
+#contact-info-container {
+    background-color        : #ff4500;
+    color                   : #fff;
+}
+
+form {
+    display                 : none;
+}
+
+.form-row {
+    display                 : flex;
+}
+
+.form-header {
+    margin                  : 5px;
+    display                 : flex;
+    flex-direction          : row !important;
+}
+
+.form-header > div {
+    background-color        : #ff4500;
+    color                   : #fff;
+}
+
+
+.form-header > h1 {
+    margin                  : 0;
+}
+
+input {
+    padding                 : 10px;
+    font-family             : inherit;
+    border                  : 0;
+    border-bottom           : 2px solid #ff4500;
+    margin                  : 5px;
+}
+
+textarea {
+    border                  : 0;
+    font-family             : inherit;
+    margin                  : 5px;
+    padding                 : 10px;
+    background-color        : #fff;
+}
+
+input[type="submit"] {
+    cursor                  : pointer;
+    background-color        : #ff4500;
+    color                   : #fff;
+}
 
 @media (min-width: 100px) {
     body {
@@ -237,9 +292,25 @@ ul {
 
     .main-row {
         display                 : flex;
-        padding                 : 200px 20px 310px;
+        padding                 : 150px 20px 310px;
         background              : url("/assets/images/face-mobile.jpg") no-repeat;
         background-size         : cover;
+    }
+
+    form {
+        width                   : 100%;
+    }
+
+    .form-row {
+        flex-direction          : column;
+    }
+
+    .form-header > div {
+        margin                  : auto 0 auto auto;
+    }
+
+    .form-header i {
+        margin                  : auto 0 auto auto;
     }
 }
 
@@ -275,14 +346,9 @@ ul {
         height                  : 250px;
     }
 
-    #contact-info-container {
-        display                 : block;
-        width                   : 100%;
-        padding                 : 20px;
-    }
-
     .project-block {
         padding                 : 20px;
+        min-height              : 200px;
     }
 
     .pb-one {
@@ -316,12 +382,23 @@ ul {
         width                   : 35%;
     }
 
+    #values-container {
+        padding                 : 20px;
+        width                   : 35%;
+    }
+
+    #contact-info-container {
+        display                 : block;
+        width                   : 100%;
+        padding                 : 20px;
+        width                   : 82%;
+    }
 }
 
 
 @media(min-width: 900px) {
     .project-block {
-        height                  : 180px;
+        height                  : 200px;
     }
 
     .pb-four {
@@ -330,31 +407,42 @@ ul {
 }
 
 @media(min-width: 1000px) {
+    #logo-container {
+        padding                 : 10px 30px;
+    }
+
     #welcome-note {
-        padding                 : 120px
+        padding                 : 50px;
     }
 
     .project-block {
-        padding                 : 20px 120px;
+        padding                 : 20px 50px;
     }
 
     .pb-three {
-        width                   : 48.6%;
+        width                   : 40.7%;
     }
 
     .pb-four {
-        width                   : 43.5%;
+        width                   : 50.2%;
     }
 
     .main-row {
         height                  : 65%;
     }
 
-    #logo-container {
-        padding                 : 10px 100px;
+    form {
+        width                   : 25%;
+        padding                 : 50px 0;
     }
 
     #contact-info-container {
-        padding                 : 20px 120px;
+        padding                 : 20px 43px;
+        width                   : 23.4%;
+    }
+
+    #values-container {
+        padding                 : 20px 50px;
+        width                   : 64.9%;
     }
 }
