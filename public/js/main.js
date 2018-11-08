@@ -24,7 +24,7 @@ const Controller        = {
     toggleMobileMenu    : function () {
         var state       = 0;
 
-        Elements.menuIcon.addEventListener("click", () => {
+        Elements.menuIcon.onclick = function () {
             if (state === 0) {
                 View.display(Elements.menuLinks)
                 state = 1;
@@ -32,7 +32,17 @@ const Controller        = {
                 View.hide(Elements.menuLinks)
                 state = 0;
             }
-        }, false);
+        }
+
+        // addEventListener("click", () => {
+        //     if (state === 0) {
+        //         View.display(Elements.menuLinks)
+        //         state = 1;
+        //     }else {
+        //         View.hide(Elements.menuLinks)
+        //         state = 0;
+        //     }
+        // }, false);
     },
     displayContactForm  : function () {
         /**
@@ -42,21 +52,32 @@ const Controller        = {
          */
         var state       = 0;
 
-        Elements.contactLink.addEventListener("click", () => {
+        // Elements.contactLink.addEventListener("click", () => {
+        //     if (document.lastChild.clientWidth < 700 && state === 0) {
+        //         View.display(Elements.contactForm);
+        //         View.hide(Elements.welcomeNote)
+        //     }else {
+        //         View.display(Elements.contactForm);
+        //     }
+        // },false);
+        Elements.contactLink.onclick = function () {
             if (document.lastChild.clientWidth < 700 && state === 0) {
                 View.display(Elements.contactForm);
                 View.hide(Elements.welcomeNote)
             }else {
                 View.display(Elements.contactForm);
             }
-
-        },false);
+        }
     },
     closeContactForm    : function () {
         Elements.closeContactFormBtn.addEventListener("click", () => {
             View.hide(Elements.contactForm);
             View.display(Elements.welcomeNote);
         })
+    },
+    getPortfolio        : function () {
+        const xhr       = new XMLHttpRequest();
+
     }
 }
 
