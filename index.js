@@ -5,7 +5,13 @@ const http              = require("http");
 
 // Dependencies
 const expHBS            = require("express-handlebars").create({
-  defaultLayout: "main"
+    defaultLayout       : "main",
+    helpers             : {
+        section         : function (name, options) {
+            this._section       = {};
+            this._section[name] = options.fn(this)
+        }
+    }
 });
 
 // Custom modules
