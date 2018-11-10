@@ -20,6 +20,7 @@
 
 .col {
     display                 : flex;
+    flex-direction          : column;
 }
 
 .col-1 {
@@ -106,14 +107,6 @@ a {
     font-family             : "Crunchy";
 }
 
-button {
-    border                  : 0;
-    margin                  : 0 0 0 auto;
-    background-color        : #ff4500;
-    color                   : #fff;
-    cursor                  : pointer;
-}
-
 #menu-links {
     display                 : none;
 }
@@ -132,6 +125,18 @@ h1, h2, h3, h4, h5, h6 {
     font-family             : "Grotesk Medium";
 }
 
+#menu-icon {
+    border                  : 0;
+}
+
+button, a.button {
+    margin                  : 0 0 0 auto;
+    background-color        : #ff4500;
+    color                   : #fff;
+    cursor                  : pointer;
+    font-size               : small;
+}
+
 .action-button {
     text-transform          : uppercase;
     font-family             : "Grotesk Bold";
@@ -146,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 main > section {
     display                 : flex;
     flex-wrap               : wrap;
-    background              : url("/assets/images/bg-gallary.svg") no-repeat;
+    /* background              : url("/assets/images/bg-gallary.svg") no-repeat; */
     background-size         : cover;
 }
 
@@ -210,6 +215,10 @@ form {
     margin                  : 0;
 }
 
+#close-contact-form {
+    border                  : 0;
+}
+
 input {
     padding                 : 10px;
     font-family             : inherit;
@@ -245,7 +254,7 @@ input[type="submit"] {
         height                  : 100%;
     }
 
-    button {
+    button, a.button {
         padding                 : 10px 15px;
     }
 
@@ -282,7 +291,11 @@ input[type="submit"] {
         display                 : none;
     }
 
-    .row {
+    .project-block, #values-container, #contact-info-container {
+        display                 : none;
+    }
+
+    .project-row {
         display                 : none;
     }
 
@@ -332,8 +345,8 @@ input[type="submit"] {
         background-size         : cover;
     }
 
-    .row {
-        display                 : flex;
+    .project-block, #values-container, #contact-info-container {
+        display                 : block;
     }
 
     #welcome-note {
