@@ -1,0 +1,8 @@
+.portfolio-section {
+    background-color        : #4682b4;
+}
+
+.project-collection > div {
+    padding                 : 20px;
+    color                   : #fff;
+}
