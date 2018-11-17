@@ -1,42 +1,43 @@
 <section class="col-12">
-    <div class="row main-row">
-        <div id="welcome-note">
-            <h1 style="margin:0;">Sandra Ntso&ecirc;le</h1>
-            <small>Website developer, based in Sedibeng.</small>
-            <p>
-                Bringing together a passion for business and love for design, to
-                create a meaningful online experience for customers.
-            </p>
-            <a href="/projects" class="button action-button" id="link-portfolio">See My Work</a>
-            <a class="button action-button" id="link-contact-me">
-              Get In Touch
-            </a>
-        </div>
-        <form action="/get-quote" method="post" id="contact-form">
-            <div class="form-row form-header">
-                <h3>Get In Touch</h3>
-                <div class="">
-                    <button id="close-contact-form" type="button" class="zmdi zmdi-close"></button>
+    <div id="bg-image">
+        <div class="row main-row">
+            <div id="welcome-note">
+                <h1 style="margin:0;">Sandra Ntso&ecirc;le</h1>
+                <small>Website developer, based in Sedibeng.</small>
+                <p>
+                    Using the love for customer service, programming and
+                    design, to create engaging, and effective websites for
+                    businesses.
+                </p>
+                <div class="row">
+                    <a href="/projects" class="button action-button" id="link-portfolio">See My Work</a>
+                    <a class="button action-button" id="get-in-touch">
+                      Get In Touch
+                    </a>
                 </div>
             </div>
-            <div class="form-row">
-                <input type="text" name="firstName" placeholder="First Name">
-                <input type="text" name="email" placeholder="Email Address">
-            </div>
-            <div class="form-row">
-                <input type="text" name="subject" placeholder="Subject">
-            </div>
-            <div class="form-row">
-                <textarea name="name" rows="5" placeholder="Message"></textarea>
-            </div>
-            <div class="form-row">
-                <input type="submit" class="action-button" value="Submit">
-            </div>
-        </form>
+            <form action="/get-quote" method="post" id="contact-form">
+                <div class="form-row form-header">
+                    <h3>Get In Touch</h3>
+                    <div class="">
+                        <button id="close-contact-form" type="button" class="zmdi zmdi-close"></button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <input type="text" name="firstName" placeholder="First Name">
+                    <input type="text" name="email" placeholder="Email Address">
+                </div>
+                <div class="form-row">
+                    <textarea name="name" rows="5" placeholder="Message"></textarea>
+                </div>
+                <div class="form-row">
+                    <input type="submit" class="action-button" value="Submit">
+                </div>
+            </form>
+        </div>
     </div>
-
     <div class="row project-row">
-        <div class="project-block pb-one" >
+        <div class="project-block col-4" style="background-color: #000; color: #fff">
             <h3><a href="">Preguntas</a></h3>
             <p>
                 A place to gain and share knowledge. A platform for asking
@@ -46,7 +47,7 @@
               View Project <i class="zmdi zmdi-arrow-right"></i>
             </button>
         </div>
-        <div class="project-block pb-two">
+        <div class="project-block col-9Plus">
             <h3><a href="">Modelo</a></h3>
             <p>
                 Stay super organized and get things done. Modelo helps
@@ -61,7 +62,17 @@
     </div>
 
     <div class="row project-row">
-        <div class="project-block pb-three">
+        <div class="project-block col-4" >
+            <h3><a href="">The Morty Project</a></h3>
+            <p>
+                A music discovery website that recommends a song, every day,
+                based on your music preference.
+            </p>
+            <button type="button" class="action-button">
+              View Project <i class="zmdi zmdi-arrow-right"></i>
+            </button>
+        </div>
+        <div class="project-block col-4" style="background-color: #000; color: #fff">
             <h3><a href="">FastFood Guru</a></h3>
             <p>
                 A source for fast food restaurant reviews.
@@ -70,34 +81,25 @@
               View Project <i class="zmdi zmdi-arrow-right"></i>
             </button>
         </div>
-        <div class="project-block pb-four">
+        <div class="project-block col-4" style="background-color: #ff4500; color: #fff">
             <h3><a href="">FastFood Guru</a></h3>
             <p>
                 A source for fast food restaurant reviews.
             </p>
-            <button type="button" class="action-button">
-              View Project <i class="zmdi zmdi-arrow-right"></i>
-            </button>
-        </div>
-        <div class="project-block pb-five">
-            <h3><a href="">FastFood Guru</a></h3>
-            <p>
-                A source for fast food restaurant reviews.
-            </p>
-            <button type="button" class="action-button">
+            <button type="button" class="action-button" style="background-color: #000;">
               View Project <i class="zmdi zmdi-arrow-right"></i>
             </button>
         </div>
     </div>
 
     <div class="row project-row">
-        <div id="values-container">
+        <div id="values-container" class="col-9Plus" style="background-color: #ff4500; color: #fff">
             <h1 style="margin: 0">Principles</h1>
             <p>Customer centered</p>
             <p>Honest communication</p>
             <p>Design obsessed</p>
         </div>
-        <div id="contact-info-container">
+        <div id="contact-info-container" class="col-4">
             <h1 style="margin: 0">Say hello</h1>
             <p>
                 <a href="tel:0786045496">078 604 5496</a>
@@ -110,3 +112,7 @@
         </div>
     </div>
 </section>
+
+{{#section "script"}}
+<script src="/js/home.js" charset="utf-8"></script>
+{{/section}}

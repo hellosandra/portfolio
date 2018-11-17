@@ -24,67 +24,61 @@
 }
 
 .col-1 {
-    width                   : 8.3333%;
+    width                   : 8.3333% !important;
 }
 
 .col-2 {
-    width                   : 16.6666%;
+    width                   : 16.6666% !important;
 }
 
 .col-3 {
-    width                   : 25%;
+    width                   : 25% !important;
 }
 
 .col-4 {
-    width                   : 33.3332%;
+    width                   : 33.3332% !important;
 }
 
 .col-5 {
-    width                   : 41.6653%;
+    width                   : 41.6653% !important;
 }
 
 .col-6 {
-    width                   : 50%;
+    width                   : 50% !important;
 }
 
 .col-7 {
-    width                   : 58.3328%;
+    width                   : 58.3328% !important;
 }
 
 .col-8 {
-    width                   : 66.6661%;
+    width                   : 66.6661% !important;
 }
 
 .col-9 {
-    width                   : 75%;
+    width                   : 75% !important;
 }
 
 .col-10 {
-    width                   : 83.3327%;
+    width                   : 83.3327% !important;
 }
 
 .col-11 {
-    width                   : 91.6667%;
+    width                   : 91.6667% !important;
 }
 
 .col-12 {
-    width                   : 100%;
+    width                   : 100% !important;
 }
 
-html {
+html, body, main{
     height                  : 100%;
+    width                   : 100%;
 }
 
 body {
     margin                  : 0;
     font-family             : "Grotesk Regular";
-    height                  : 100%;
-    display                 : flex;
-    flex-direction          : column;
-}
-
-main {
-    height                  : 100%;
 }
 
 nav {
@@ -130,11 +124,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button, a.button {
-    margin                  : 0 0 0 auto;
     background-color        : #ff4500;
     color                   : #fff;
     cursor                  : pointer;
     font-size               : small;
+}
+
+a.button {
+    margin-right            : 5px;
 }
 
 .action-button {
@@ -151,13 +148,32 @@ button, a.button {
 main > section {
     display                 : flex;
     flex-wrap               : wrap;
-    /* background              : url("/assets/images/bg-gallary.svg") no-repeat; */
     background-size         : cover;
+    overflow                : auto;
+}
+
+#bg-image {
+    display                 : flex;
+    width                   : 100%;
+    height                  : inherit;
+}
+
+.main-row {
+    background-color        : #000;
+    filter                  : opacity(0.7);
+}
+
+#welcome-note {
+    color                   : #fff;
 }
 
 ul {
     list-style-type         : none;
     padding                 : 0;
+}
+
+#link-portfolio {
+    background-color        : #000;
 }
 
 #contact-info-container a {
@@ -173,6 +189,7 @@ ul {
 .project-block {
     position                : relative;
 }
+
 .project-block > h3 {
     border-bottom           : 1px solid;
 }
@@ -184,11 +201,6 @@ ul {
 
 .row button {
     margin                  : 0 auto;
-}
-
-#contact-info-container {
-    background-color        : #ff4500;
-    color                   : #fff;
 }
 
 form {
@@ -251,16 +263,11 @@ input[type="submit"] {
     }
 
     section {
-        height                  : 100%;
+        height                  : inherit;
     }
 
     button, a.button {
         padding                 : 10px 15px;
-    }
-
-    #link-portfolio {
-        background-color        : inherit;
-        color                   : #000;
     }
 
     #social-media-icons {
@@ -291,8 +298,14 @@ input[type="submit"] {
         display                 : none;
     }
 
-    .project-block, #values-container, #contact-info-container {
-        display                 : none;
+    #welcome-note {
+        display                 : flex;
+        flex-direction          : column;
+    }
+
+    #bg-image {
+        background              : url("/assets/images/face-mobile.jpg") no-repeat;
+        background-size         : cover;
     }
 
     .project-row {
@@ -300,11 +313,9 @@ input[type="submit"] {
     }
 
     .main-row {
-        display                 : flex;
-        padding                 : 150px 20px 310px;
-        background              : url("/assets/images/face-mobile.jpg") no-repeat;
-        background-size         : cover;
+        padding                 : 150px 20px;
     }
+
 
     form {
         width                   : 100%;
@@ -327,6 +338,7 @@ input[type="submit"] {
     body {
         overflow                : auto;
     }
+
     #menu-icon {
         display                 : none;
     }
@@ -335,24 +347,24 @@ input[type="submit"] {
         padding                 : 10px 0;
     }
 
-    section > div {
+    #bg-image{
+        background              : url("/assets/images/face-gray.jpg") no-repeat;
+        background-size         : cover;
+        display                 : flex;
         margin                  : 0;
     }
 
     .main-row {
         padding                 : 0;
-        background              : url("/assets/images/face-gray.jpg") no-repeat;
-        background-size         : cover;
     }
 
-    .project-block, #values-container, #contact-info-container {
-        display                 : block;
+    .project-row, #contact-info-container {
+        display                 : flex;
     }
 
     #welcome-note {
         width                   : 60%;
-        padding                 : 20px;
-        height                  : 250px;
+        padding                 : 70px 20px;
     }
 
     .project-block {
@@ -360,47 +372,22 @@ input[type="submit"] {
         min-height              : 200px;
     }
 
-    .pb-one {
-        width                   : 30%;
+    .project-block > p {
+        height                  : 80px;
+        overflow                : hidden;
     }
 
-    .pb-two {
-        width                   : 70%;
-        background-color        : #000;
-        color                   : #fff;
-    }
-
-    .pb-three {
-        width                   : 35%;
-        background-color        : #000;
-        color                   : #fff;
-    }
-
-    .pb-four {
-        width                   : 40%;
-        background-color        : #ff4500;
-        color                   : #fff;
-    }
-
-    .pb-four button {
-        border                  : 2px solid #000;
-        background-color        : #000;
-    }
-
-    .pb-five {
-        width                   : 35%;
+    .col-9Plus {
+        width                   : 80.7%;
     }
 
     #values-container {
         padding                 : 20px;
-        width                   : 35%;
     }
 
     #contact-info-container {
         display                 : block;
-        width                   : 100%;
         padding                 : 20px;
-        width                   : 82%;
     }
 
     form {
@@ -409,19 +396,13 @@ input[type="submit"] {
     }
 }
 
-@media(min-width: 900px) {
-    .project-block {
-        height                  : 200px;
-    }
-
-    .pb-four {
-        width                   : 41%;
-    }
-}
-
 @media(min-width: 1000px) {
     #logo-container {
         padding                 : 10px 30px;
+    }
+
+    #bg-image {
+        height                  : 60%;
     }
 
     #welcome-note {
@@ -432,30 +413,20 @@ input[type="submit"] {
         padding                 : 20px 50px;
     }
 
-    .pb-three {
-        width                   : 40.7%;
-    }
-
-    .pb-four {
-        width                   : 50.2%;
-    }
-
-    .main-row {
-        height                  : 65%;
+    .project-row > .col-4 {
+        width                   : 35.7% !important;
     }
 
     form {
-        width                   : 25%;
-        padding                 : 50px 0;
+        width                   : 40%;
+        padding                 : 50px;
     }
 
     #contact-info-container {
-        padding                 : 20px 43px;
-        width                   : 23.4%;
+        padding                 : 20px 50px;
     }
 
     #values-container {
         padding                 : 20px 50px;
-        width                   : 64.9%;
     }
 }
