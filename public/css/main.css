@@ -24,51 +24,51 @@
 }
 
 .col-1 {
-    width                   : 8.3333% !important;
+    width                   : 8.3333%;
 }
 
 .col-2 {
-    width                   : 16.6666% !important;
+    width                   : 16.6666%;
 }
 
 .col-3 {
-    width                   : 25% !important;
+    width                   : 25%;
 }
 
 .col-4 {
-    width                   : 33.3332% !important;
+    width                   : 33.3332%;
 }
 
 .col-5 {
-    width                   : 41.6653% !important;
+    width                   : 41.6653%;
 }
 
 .col-6 {
-    width                   : 50% !important;
+    width                   : 50%;
 }
 
 .col-7 {
-    width                   : 58.3328% !important;
+    width                   : 58.3328%;
 }
 
 .col-8 {
-    width                   : 66.6661% !important;
+    width                   : 66.6661%;
 }
 
 .col-9 {
-    width                   : 75% !important;
+    width                   : 75%;
 }
 
 .col-10 {
-    width                   : 83.3327% !important;
+    width                   : 83.3327%;
 }
 
 .col-11 {
-    width                   : 91.6667% !important;
+    width                   : 91.6667%;
 }
 
 .col-12 {
-    width                   : 100% !important;
+    width                   : 100%;
 }
 
 html, body, main{
@@ -149,7 +149,6 @@ main > section {
     display                 : flex;
     flex-wrap               : wrap;
     background-size         : cover;
-    overflow                : auto;
 }
 
 #bg-image {
@@ -378,7 +377,7 @@ input[type="submit"] {
     }
 
     .col-9Plus {
-        width                   : 80.7%;
+        width                   : 73%;
     }
 
     #values-container {
@@ -396,7 +395,7 @@ input[type="submit"] {
     }
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 1024px) {
     #logo-container {
         padding                 : 10px 30px;
     }
@@ -413,8 +412,8 @@ input[type="submit"] {
         padding                 : 20px 50px;
     }
 
-    .project-row > .col-4 {
-        width                   : 35.7% !important;
+    .col-9Plus {
+        width                   : 80.7%;
     }
 
     form {
@@ -428,5 +427,22 @@ input[type="submit"] {
 
     #values-container {
         padding                 : 20px 50px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .col-9Plus {
+        width                   : 75.5%;
+    }
+}
+
+
+@media (min-width: 2500px) {
+    html {
+        font-size               : x-large;
+    }
+    
+    .col-9Plus {
+        width                   : 71%;
     }
 }
