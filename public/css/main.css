@@ -432,6 +432,12 @@ input[type="submit"] {
 
 @media (min-width: 1300px) {
     .col-9Plus {
+        width                   : 76%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .col-9Plus {
         width                   : 75.5%;
     }
 }
@@ -441,7 +447,7 @@ input[type="submit"] {
     html {
         font-size               : x-large;
     }
-    
+
     .col-9Plus {
         width                   : 71%;
     }
