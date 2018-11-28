@@ -404,12 +404,12 @@ input[type="submit"] {
 
     #nav-links {
         display                 : flex;
-        width                   : 50%;
+        width                   : 60%;
     }
 
     #nav-links > ul {
         display                 : flex;
-        margin                  : 20px 0 10px 0;
+        margin                  : 20px 20px 10px auto;
     }
 
     nav li {
@@ -417,6 +417,7 @@ input[type="submit"] {
         margin                  : 0 5px;
         border-bottom           : 1px solid;
         display                 : flex;
+        text-transform          : lowercase;
     }
 }
 
@@ -431,7 +432,7 @@ input[type="submit"] {
 
     #welcome-note {
         padding                 : 50px;
-        width                   : 40%;
+        width                   : 50%;
     }
 
     .project-block {
@@ -443,8 +444,8 @@ input[type="submit"] {
     }
 
     form {
-        width                   : 25%;
         padding                 : 50px;
+        width                   : 30%;
     }
 
     #contact-info-container {
@@ -455,6 +456,11 @@ input[type="submit"] {
     #values-container {
         padding                 : 20px 50px;
         flex                    : 12.1;
+    }
+
+    #nav-links > ul {
+        display                 : flex;
+        margin                  : 20px 50px 10px auto;
     }
 }
 
