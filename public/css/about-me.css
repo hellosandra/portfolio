@@ -1,0 +1,84 @@
+/*  Mobile First */
+section {
+    flex-direction          : column;
+}
+
+section > div {
+    padding                 : 0 20px;
+}
+
+#header {
+    background-color        : #ff4500;
+    height                  : 50px;
+    display                 : flex;
+    margin                  : 0 0 50px;
+}
+
+#picture {
+    width                   : 30%;
+    height                  : 100px;
+    background-color        : #E5E5E5;
+}
+
+#quote {
+    width                   : 65%;
+    align-self              : flex-end;
+    margin                  : 0 0 0 auto;
+    color                   : #fff;
+}
+
+table {
+    text-align              : left;
+    table-layout            : fixed;
+    width                   : 100%;
+}
+
+td, th {
+    width                   : 50%;
+    padding                 : 5px 0;
+    font-weight             : bold;
+}
+
+td small {
+    font-weight             : normal;
+}
+
+progress{
+    border                  : 0;
+    background-color        : #fff;
+    width                   : 100%;
+}
+
+progress::-webkit-progress-bar {
+    background-color        : #fff;
+}
+
+.dislike > progress::-moz-progress-bar {
+    background-color        : red;
+    direction               : rtl;
+}
+
+.like > progress::-moz-progress-bar{
+    background-color        : green;
+}
+
+.dislike > progress::-webkit-progress-bar {
+    direction               : rtl;
+}
+
+.dislike > progress::-webkit-progress-value {
+    background-color        : red;
+}
+
+.like >  progress::-webkit-progress-value {
+    background-color        : green;
+}
+
+.dislike {
+    text-align              : right;
+    padding-left            : 2px
+}
+
+.like {
+    padding-left            : 2px
+}
