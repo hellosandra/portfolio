@@ -1,8 +1,51 @@
+/*  Mobile First */
 .portfolio-section {
-    background-color        : #4682b4;
+    background-color        : #fff;
+}
+
+.project-collection {
+    padding                 : 0 10px;
 }
 
 .project-collection > div {
-    padding                 : 20px;
-    color                   : #fff;
+    padding                 : 10px;
+    color                   : #000;
+    display                 : flex;
+    flex-direction          : column;
 }
+
+/* Tablet */
+@media (min-width: 768px) {
+    .project-collection {
+        padding             : 15px;
+    }
+
+    .project-collection > div {
+        display             : flex;
+        flex-direction      : column;
+        flex                : 1;
+    }
+
+    .project-collection > div > p {
+        height              : 80px;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    .project-collection {
+        padding             : 0 25px;
+        display             : flex;
+        flex-direction      : row;
+    }
+
+    .project-collection > div {
+        padding             : 0 25px;
+    }
+
+    .project-collection > div > p {
+        height              : 150px;
+    }
+}
+
+/* Larger laptop and desktop monitors */
