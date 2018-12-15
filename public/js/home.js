@@ -1,7 +1,10 @@
 Selector.getInTouchBtn          = document.querySelector("#get-in-touch"),
 Selector.contactForm            = document.querySelector("#contact-form"),
 Selector.closeContactFormBtn    = document.querySelector("#close-contact-form"),
-Selector.welcomeNote            = document.querySelector("#welcome-note")
+Selector.welcomeNote            = document.querySelector("#welcome-note"),
+Selector.page                   = document.querySelector("html"),
+Selector.nav                    = document.querySelector("nav"),
+Selector.mainSection            = document.querySelector("section")
 
 Controller.displayContactForm   = function () {
     /**
@@ -28,5 +31,14 @@ Controller.closeContactForm    = function () {
     })
 }
 
+Controller.setSectionHeight        = function () {
+    const $         = Selector;
+    const height    = $.page.clientHeight - $.nav.clientHeight;
+
+    $.mainSection.style.height      = String(height) + "px";
+}
+
+document.onresize = Controller.setSectionHeight()
+Controller.setSectionHeight();
 Controller.displayContactForm();
 Controller.closeContactForm();

@@ -1,132 +1,51 @@
 <section class="col-12">
-    <div id="bg-image">
-        <div class="row main-row">
+    <div class="row main-row">
 
-            <div id="welcome-note">
-                <h1 style="margin:0;">Sandra Ntso&ecirc;le</h1>
-                <small>Website developer, based in Sedibeng.</small>
-                <p>
-                    Using my love for programming and design,
-                    to create engaging, and effective websites for
-                    businesses. Check out my work below and feel free to get in touch
-                    if you want to work with me.
-                </p>
-                <div class="row">
-                    <a href="/projects" class="button action-button" id="link-portfolio">See My Work</a>
-                    <a class="button action-button" id="get-in-touch">
-                      Get In Touch
-                    </a>
+        <div id="welcome-note">
+            <h1 style="margin:0;">Sandra Ntso&ecirc;le</h1>
+            <small>Website developer, based in Sedibeng.</small>
+            <p>
+                Just a regular joe, using my passion for programming and design
+                to create websites for people. I will go out of my way to meet and/or
+                exceed your expectations, because I love what I do, and I do it
+                with one goal in mind: <strong>"create clean and effective websites"</strong>.
+            </p>
+            <p>
+                So feel free to check out my work or get in touch
+                if you want to work with me.
+            </p>
+            <p>
+                <small><a href="mailto:sandrantsoele@pm.me" style="border-bottom: 1px solid">sandrantsoele@pm.me</a></small>
+                |
+                <small><a href="tel:0786045496" style="border-bottom: 1px solid">078 604 5496</a></small>
+            </p>
+            <div class="row">
+                <a href="/projects" class="button action-button" id="link-portfolio">See My Work</a>
+                <a class="button action-button" id="get-in-touch">
+                  Get In Touch
+                </a>
+            </div>
+        </div>
+
+        <form action="/get-in-touch" method="post" id="contact-form">
+            <div class="form-row form-header">
+                <h3>Get In Touch</h3>
+                <div class="">
+                    <button id="close-contact-form" type="button" class="zmdi zmdi-close"></button>
                 </div>
             </div>
+            <div class="form-row">
+                <input type="text" name="firstName" placeholder="First Name" autofocus>
+                <input type="text" name="email" placeholder="Email Address">
+            </div>
+            <div class="form-row">
+                <textarea name="message" rows="5" placeholder="Message" maxlength="255"></textarea>
+            </div>
+            <div class="form-row">
+                <input type="submit" class="action-button" value="Submit">
+            </div>
+        </form>
 
-            <form action="/get-quote" method="post" id="contact-form">
-                <div class="form-row form-header">
-                    <h3>Get In Touch</h3>
-                    <div class="">
-                        <button id="close-contact-form" type="button" class="zmdi zmdi-close"></button>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <input type="text" name="firstName" placeholder="First Name" autofocus>
-                    <input type="text" name="email" placeholder="Email Address">
-                </div>
-                <div class="form-row">
-                    <textarea name="name" rows="5" placeholder="Message"></textarea>
-                </div>
-                <div class="form-row">
-                    <input type="submit" class="action-button" value="Submit">
-                </div>
-            </form>
-
-        </div>
-    </div>
-
-    <!-- First row after welcome note -->
-    <div class="row project-row">
-
-        <div class="project-block col-4" style="background-color: #000; color: #fff; flex: 5">
-            <h3><a href="">Preguntas</a></h3>
-            <p>
-                A place to gain and share knowledge. A platform for asking
-                questions and connecting with people.
-            </p>
-            <button type="button" class="action-button">
-              View Project <i class="zmdi zmdi-arrow-right"></i>
-            </button>
-        </div>
-
-        <div class="project-block col-9Plus" style="flex: 5">
-            <h3><a href="">Modelo</a></h3>
-            <p>
-                Stay super organized and get things done. Modelo helps
-                you keep track of all the things you need to do, from grocery
-                shopping all the way up to big work projects.
-            </p>
-            <button type="button" class="action-button">
-              View Project
-              <i class="zmdi zmdi-arrow-right"></i>
-            </button>
-        </div>
-
-    </div>
-
-    <!-- Second row -->
-    <div class="row project-row">
-
-        <div class="project-block col-4">
-            <h3><a href="">The Morty Project</a></h3>
-            <p>
-                A music discovery website that recommends a song, every day,
-                based on your music preference.
-            </p>
-            <button type="button" class="action-button">
-              View Project <i class="zmdi zmdi-arrow-right"></i>
-            </button>
-        </div>
-
-        <div class="project-block col-4" style="background-color: #000; color: #fff;">
-            <h3><a href="">FastFood Guru</a></h3>
-            <p>
-                A source for fast food restaurant reviews.
-            </p>
-            <button type="button" class="action-button">
-              View Project <i class="zmdi zmdi-arrow-right"></i>
-            </button>
-        </div>
-
-        <div class="project-block col-4" style="background-color: #ff4500; color: #fff;">
-            <h3><a href="">FastFood Guru</a></h3>
-            <p>
-                A source for fast food restaurant reviews.
-            </p>
-            <button type="button" class="action-button" style="background-color: #000;">
-              View Project <i class="zmdi zmdi-arrow-right"></i>
-            </button>
-        </div>
-
-    </div>
-
-    <div class="row project-row">
-
-        <div id="values-container" class="col-9Plus" style="background-color: #ff4500; color: #fff;">
-            <h1 style="margin: 0">Principles</h1>
-            <p>Customer centered</p>
-            <p>Honest communication</p>
-            <p>Design obsessed</p>
-        </div>
-
-        <div id="contact-info-container" class="col-4">
-            <h1 style="margin: 0">Say hello</h1>
-            <p>
-                <a href="tel:0786045496">078 604 5496</a>
-            </p>
-            <p>
-                <a href="mailto:sandrantsoele@pm.me">
-                  sandrantsoele@pm.me
-                </a>
-            </p>
-        </div>
-        
     </div>
 </section>
 
