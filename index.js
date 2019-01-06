@@ -1,7 +1,6 @@
 // Express
 const express           = require("express");
 const app               = express();
-const http              = require("http");
 
 // Dependencies
 const expHBS            = require("express-handlebars").create({
@@ -13,10 +12,12 @@ const expHBS            = require("express-handlebars").create({
         }
     }
 });
+const bodyParser        = require("body-parser");
 
 // Custom modules
 const config            = require("./config/config");
 const router            = require("./routes/router");
+const DB                = require("./config/database");
 
 
 // Setup view engine
@@ -24,8 +25,18 @@ app.engine("hbs", expHBS.engine);
 app.set("view engine", "hbs")
 
 // Middleware
+// Disable "x powered by" header
+app.disable('x-powered-by');
+// Set directory for static files
 app.use(express.static(__dirname + "/public/"));
+app.use(bodyParser.urlencoded({extended: true}));
+// Log HTTP method as well as requested URL
+app.use((req, res, next)=>{
+    console.log(req.method + ": " + req.url);
+    next();
+});
 app.use("/", router);
+
 
 // Custom Error Pages
 // 404

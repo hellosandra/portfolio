@@ -6,4 +6,7 @@ Router.get("/", routes.home);
 Router.get("/projects", routes.projects);
 Router.get("/about-me", routes.aboutMe);
 
+
+Router.post("/get-in-touch", routes.getInTouch);
+
 module.exports = Router;
