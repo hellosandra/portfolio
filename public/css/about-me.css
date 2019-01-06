@@ -1,6 +1,11 @@
 /*  Mobile First */
+main {
+    height                  : auto;
+}
+
 section {
-    flex-direction          : column;
+    height                  : auto;
+    color                   : #333;
 }
 
 section > div {
@@ -8,16 +13,28 @@ section > div {
 }
 
 #header {
-    background-color        : #ff4500;
-    height                  : 50px;
     display                 : flex;
-    margin                  : 0 0 50px;
+}
+
+#header > p {
+    margin                  : auto 0 0 25px;
+}
+
+#top, #center, #bottom{
+    width                   : auto;
+    line-height             : 2;
 }
 
 #picture {
-    width                   : 30%;
+    width                   : 100px;
     height                  : 100px;
-    background-color        : #E5E5E5;
+    background-color        : #fff;
+    margin                  : 10px 0;
+    box-shadow              : 5px 5px 5px 0;
+}
+
+#picture > img {
+    border-radius           : 50px;
 }
 
 #quote {
@@ -43,23 +60,33 @@ td small {
     font-weight             : normal;
 }
 
+/* Mozilla progress bar styling */
 progress{
     border                  : 0;
-    background-color        : #fff;
+    background-color        : #4682b4;
     width                   : 100%;
 }
 
-progress::-webkit-progress-bar {
+progress::-moz-progress-bar {
     background-color        : #fff;
 }
 
 .dislike > progress::-moz-progress-bar {
-    background-color        : red;
+    background-color        : blueviolet;
     direction               : rtl;
 }
 
 .like > progress::-moz-progress-bar{
-    background-color        : green;
+    background-color        : purple;
+}
+
+/* Chrome progress bar styling */
+progress::-webkit-progress-bar {
+    background-color        : #4682b4;
+}
+
+progress::-webkit-progress-value {
+    background-color        : #fff;
 }
 
 .dislike > progress::-webkit-progress-bar {
@@ -67,11 +94,11 @@ progress::-webkit-progress-bar {
 }
 
 .dislike > progress::-webkit-progress-value {
-    background-color        : red;
+    background-color        : blueviolet;
 }
 
 .like >  progress::-webkit-progress-value {
-    background-color        : green;
+    background-color        : purple;
 }
 
 .dislike {
@@ -81,4 +108,75 @@ progress::-webkit-progress-bar {
 
 .like {
     padding-left            : 2px
+}
+
+h5 {
+    text-transform          : uppercase;
+    border-bottom           : 2px solid;
+    line-height             : 2;
+}
+
+#skills > table {
+    margin-bottom           : 1.67em;
+}
+
+#white-space {
+    display                 : none;
+}
+
+#social {
+    width                   : 100%;
+}
+
+#social-links {
+    width                   : 30%;
+}
+
+#social-links td i{
+    margin                  : 10px 10px 10px 0;
+}
+
+/* Laptop - small */
+@media(min-width: 768px) {
+    section > div {
+        padding             : 0 50px;
+    }
+
+    #social-links {
+        width                   : 20%;
+    }
+}
+
+/* Desktop */
+@media(min-width: 1025px) {
+    #top {
+        width               : 25%;
+    }
+
+    #center {
+        width               : 40%;
+    }
+
+    #bottom {
+        width               : 40%;
+    }
+
+    #nav-links > ul {
+        margin              : 10px 50px;
+    }
+
+    #logo-container {
+        padding             : 10px 50px;
+    }
+
+    #white-space {
+        display             : flex;
+    }
+
+    #social {
+        width               : 25%;
+    }
+    #social-links {
+        width               : 20%;
+    }
 }
